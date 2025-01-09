@@ -12,9 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from 'vue'
 
-const utils = inject('utils')
+import utils from '../utils'
 
-console.log(utils)
+console.log(utils.util1)
 </script>
