@@ -61,7 +61,7 @@ default export 방식 > provide, inject 방식  > named export 방식
 <br/>
 
 ## 3. 의존성 그래프 비교
-- 시각화 도구(rollup-plugin-visualizer 등)에서 보이는 트리맵(_하위 이미지들_)은 **최종 번들로 묶인 파일들을 어떻게 구성(모듈 간 의존 관계)하고 있는지**를 한눈에 보여준다.
+- 시각화 도구([rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer))에서 보이는 트리맵(_하위 이미지들_)은 **최종 번들로 묶인 파일들을 어떻게 구성(모듈 간 의존 관계)하고 있는지**를 한눈에 보여준다.
 - 트리맵에서 사각형의 크기와 위치는 대략적으로 파일 사이즈, 번들 내 비중, 의존성 연결 정도 등에 의해 결정된다.
 - 사각형 크기가 크다는 건 **파일 크기가 실제로 크거나**, **많은 컴포넌트들이 참조하여 번들 내 비중이 높기 때문**이라고 볼 수 있다.
 
@@ -108,7 +108,7 @@ default export 방식 > provide, inject 방식  > named export 방식
 - utils/index.ts에서 함수를 개별 export (예: export function a() {}, export function b() {}, …)
 - 각 컴포넌트는 필요한 함수만 import { a } from '...' 하는 방식
 
-### (2) 트리맵 해석
+#### (2) 트리맵 해석
 - utils/index.ts가 여러 개의 named export를 가지고 있어도,
 - 실제로 쓰이지 않는 함수는 최종 번들에서 제거(Tree Shaking)될 가능성이 커짐
 - 따라서 시각화해 보면 utils/index.ts가 상대적으로 작게 표시되거나 또는 “사용된 함수만” 번들에 포함되어, 각 컴포넌트와의 의존성이 간결하게 드러남
