@@ -1,13 +1,17 @@
 <script setup>
-  import { inject } from 'vue';
-
-  const utils = inject('utils');
+  import { 
+    capitalize, 
+    reverseString, 
+    slugify, 
+    toCamelCase, 
+    chunkArray 
+  } from '@/utils';
   
-  const capitalized = utils.capitalize('hello world');
-  const reversed    = utils.reverseString('Hello');
-  const slugged     = utils.slugify('Hello World!!!');
-  const camel       = utils.toCamelCase('hello_world_example');
-  const chunked     = utils.chunkArray(['a','b','c','d','e','f','g'], 3);
+  const capitalized = capitalize('hello world');
+  const reversed    = reverseString('Hello');
+  const slugged     = slugify('Hello World!!!');
+  const camel       = toCamelCase('hello_world_example');
+  const chunked     = chunkArray(['a','b','c','d','e','f','g'], 3);
   </script>
   
   <template>

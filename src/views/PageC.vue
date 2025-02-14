@@ -1,13 +1,17 @@
 <script setup>
-  import { inject } from 'vue';
-
-  const utils = inject('utils');
+  import {
+    clamp,
+    formatDate,
+    parseDate,
+    getDayOfWeek,
+    isWeekend
+  } from '@/utils';
   
-  const clamped   = utils.clamp(15, 0, 10);         // 10
-  const formatted = utils.formatDate(new Date(2023, 0, 15)); // "2023-01-15"
-  const parsed    = utils.parseDate("2023-01-15");  // Date 객체
-  const dayOfWeek = utils.getDayOfWeek(new Date(2023, 0, 15)); // 0=일,1=월...
-  const weekend   = utils.isWeekend(new Date(2023, 0, 15));    // true or false
+  const clamped   = clamp(15, 0, 10);         // 10
+  const formatted = formatDate(new Date(2023, 0, 15)); // "2023-01-15"
+  const parsed    = parseDate("2023-01-15");  // Date 객체
+  const dayOfWeek = getDayOfWeek(new Date(2023, 0, 15)); // 0=일,1=월...
+  const weekend   = isWeekend(new Date(2023, 0, 15));    // true or false
   </script>
   
 <template>
