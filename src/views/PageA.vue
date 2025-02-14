@@ -1,5 +1,7 @@
 <script setup>
-  import utils from '@/utils';
+  import { inject } from 'vue';
+
+  const utils = inject('utils');
   
   const capitalized = utils.capitalize('hello world');
   const reversed    = utils.reverseString('Hello');

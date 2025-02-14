@@ -1,6 +1,8 @@
 
   <script setup>
- import utils from '@/utils';
+  import { inject } from 'vue';
+
+  const utils = inject('utils');
   
   const flattened = utils.flattenArray([1, [2, [3, 4]], 5]);
   const uniques   = utils.uniqueArray([1,2,2,3,4,4,4]);

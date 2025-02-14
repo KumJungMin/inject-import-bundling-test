@@ -1,5 +1,7 @@
 <script setup>
-  import utils from '@/utils';
+  import { inject } from 'vue';
+
+  const utils = inject('utils');
   
   const clamped   = utils.clamp(15, 0, 10);         // 10
   const formatted = utils.formatDate(new Date(2023, 0, 15)); // "2023-01-15"

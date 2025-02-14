@@ -1,5 +1,7 @@
 <script setup>
-  import utils from '@/utils';
+  import { inject } from 'vue';
+
+  const utils = inject('utils');
   
   const emailCheck = utils.isEmail("test@example.com");
   const phoneCheck = utils.isPhone("010-1234-5678");
