@@ -1,20 +1,14 @@
 <script setup>
-  import {
-    isEmail,
-    isPhone,
-    isURL,
-    deepClone,
-    pick
-  } from '@/utils';
+  import utils from '@/utils';
   
-  const emailCheck = isEmail("test@example.com");
-  const phoneCheck = isPhone("010-1234-5678");
-  const urlCheck   = isURL("https://example.com");
+  const emailCheck = utils.isEmail("test@example.com");
+  const phoneCheck = utils.isPhone("010-1234-5678");
+  const urlCheck   = utils.isURL("https://example.com");
   
   // 예시 객체
   const originalObj  = { name: "Alice", age: 25, city: "Seoul" };
-  const clonedObj    = deepClone(originalObj);
-  const pickedObj    = pick(originalObj, ["name", "age"]);
+  const clonedObj    = utils.deepClone(originalObj);
+  const pickedObj    = utils.pick(originalObj, ["name", "age"]);
   
   const clonedObjStr = JSON.stringify(clonedObj);
   const pickedObjStr = JSON.stringify(pickedObj);

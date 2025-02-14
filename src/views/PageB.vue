@@ -1,18 +1,12 @@
 
   <script setup>
-  import {
-    flattenArray,
-    uniqueArray,
-    add,
-    subtract,
-    randomInt
-  } from '@/utils';
+ import utils from '@/utils';
   
-  const flattened = flattenArray([1, [2, [3, 4]], 5]);
-  const uniques   = uniqueArray([1,2,2,3,4,4,4]);
-  const sum       = add(10, 5);
-  const diff      = subtract(10, 5);
-  const rand      = randomInt(1, 100);
+  const flattened = utils.flattenArray([1, [2, [3, 4]], 5]);
+  const uniques   = utils.uniqueArray([1,2,2,3,4,4,4]);
+  const sum       = utils.add(10, 5);
+  const diff      = utils.subtract(10, 5);
+  const rand      = utils.randomInt(1, 100);
   </script>
   
   <template>
